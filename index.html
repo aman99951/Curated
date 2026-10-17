@@ -1432,31 +1432,32 @@
         <p style="font-size:14px;color:#64748b;margin-bottom:28px;line-height:1.6;">Tell us what you need. We'll review the requirement and identify relevant specialists from our early network.</p>
 
         <form onsubmit="handleSubmit(event,'business')" novalidate>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="form-grid">
 
             <div>
               <label class="form-label">Your name <span style="color:#ef4444;">*</span></label>
-              <input type="text" class="form-input" placeholder="Jane Smith" required />
+              <input type="text" name="name" class="form-input" placeholder="Jane Smith" required />
             </div>
 
             <div>
               <label class="form-label">Business / Company <span style="color:#ef4444;">*</span></label>
-              <input type="text" class="form-input" placeholder="Your company name" required />
+              <input type="text" name="company" class="form-input" placeholder="Your company name" required />
             </div>
 
             <div>
               <label class="form-label">Email address <span style="color:#ef4444;">*</span></label>
-              <input type="email" class="form-input" placeholder="jane@company.com" required />
+              <input type="email" name="email" class="form-input" placeholder="jane@company.com" required />
             </div>
 
             <div>
               <label class="form-label">Phone / WhatsApp</label>
-              <input type="tel" class="form-input" placeholder="+44 7XXX XXXXXX" />
+              <input type="tel" name="phone" class="form-input" placeholder="+44 7XXX XXXXXX" />
             </div>
 
             <div style="grid-column:1/-1;">
               <label class="form-label">Service required <span style="color:#ef4444;">*</span></label>
-              <select class="form-input" required>
+              <select class="form-input" name="service" required>
                 <option value="" disabled selected>Select a service...</option>
                 <option>Google Ads / PPC</option>
                 <option>SEO</option>
@@ -1470,18 +1471,18 @@
 
             <div style="grid-column:1/-1;">
               <label class="form-label">Project description <span style="color:#ef4444;">*</span></label>
-              <textarea class="form-input" rows="4" placeholder="Briefly describe your project, goals, and what you're hoping to achieve..." required style="resize:vertical;"></textarea>
+              <textarea name="project" class="form-input" rows="4" placeholder="Briefly describe your project, goals, and what you're hoping to achieve..." required style="resize:vertical;"></textarea>
             </div>
 
             <div>
               <label class="form-label">Expected start date</label>
-              <input type="date" class="form-input" />
+              <input type="date" name="start_date" class="form-input" />
             </div>
 
             <div>
               <label class="form-label">Approximate budget <span style="font-size:11px;color:#94a3b8;font-weight:400;">(optional)</span></label>
               <div style="display:flex;gap:8px;">
-                <select class="form-input" id="budget-currency" onchange="updateBudgetRanges()" aria-label="Budget currency" style="flex:0 0 106px;">
+                <select class="form-input" id="budget-currency" name="budget_currency" onchange="updateBudgetRanges()" aria-label="Budget currency" style="flex:0 0 106px;">
                   <option value="GBP" selected>GBP £</option>
                   <option value="USD">USD $</option>
                   <option value="EUR">EUR €</option>
@@ -1490,7 +1491,7 @@
                   <option value="NZD">NZD $</option>
                   <option value="INR">INR ₹</option>
                 </select>
-                <select class="form-input" id="budget-select" style="flex:1;min-width:0;">
+                <select class="form-input" id="budget-select" name="budget" style="flex:1;min-width:0;">
                   <option value="" disabled selected>Select range...</option>
                   <option>Under £1,000</option>
                   <option>£1,000 – £3,000</option>
@@ -1523,26 +1524,27 @@
         <p style="font-size:14px;color:#64748b;margin-bottom:28px;line-height:1.6;">Join our initial talent network and be considered for projects aligned with your skills, experience, availability, and preferred scope.</p>
 
         <form onsubmit="handleSubmit(event,'talent')" novalidate>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="form-grid">
 
             <div>
               <label class="form-label">Your name <span style="color:#ef4444;">*</span></label>
-              <input type="text" class="form-input" placeholder="John Doe" required />
+              <input type="text" name="name" class="form-input" placeholder="John Doe" required />
             </div>
 
             <div>
               <label class="form-label">Email address <span style="color:#ef4444;">*</span></label>
-              <input type="email" class="form-input" placeholder="john@example.com" required />
+              <input type="email" name="email" class="form-input" placeholder="john@example.com" required />
             </div>
 
             <div>
               <label class="form-label">Phone / WhatsApp</label>
-              <input type="tel" class="form-input" placeholder="+44 7XXX XXXXXX" />
+              <input type="tel" name="phone" class="form-input" placeholder="+44 7XXX XXXXXX" />
             </div>
 
             <div>
               <label class="form-label">Primary skill <span style="color:#ef4444;">*</span></label>
-              <select class="form-input" required>
+              <select class="form-input" name="skill" required>
                 <option value="" disabled selected>Select your skill...</option>
                 <option>Google Ads / PPC</option>
                 <option>SEO</option>
@@ -1556,7 +1558,7 @@
 
             <div>
               <label class="form-label">Years of experience <span style="color:#ef4444;">*</span></label>
-              <select class="form-input" required>
+              <select class="form-input" name="experience" required>
                 <option value="" disabled selected>Select range...</option>
                 <option>1–2 years</option>
                 <option>3–5 years</option>
@@ -1567,7 +1569,7 @@
 
             <div>
               <label class="form-label">Current availability</label>
-              <select class="form-input">
+              <select class="form-input" name="availability">
                 <option value="" disabled selected>Availability...</option>
                 <option>Available now</option>
                 <option>Available in 2–4 weeks</option>
@@ -1578,18 +1580,18 @@
 
             <div>
               <label class="form-label">Portfolio link</label>
-              <input type="url" class="form-input" placeholder="https://yourportfolio.com" />
+              <input type="url" name="portfolio" class="form-input" placeholder="https://yourportfolio.com" />
             </div>
 
             <div>
               <label class="form-label">LinkedIn profile</label>
-              <input type="url" class="form-input" placeholder="https://linkedin.com/in/yourprofile" />
+              <input type="url" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/yourprofile" />
             </div>
 
           </div>
 
           <label style="display:flex;align-items:flex-start;gap:10px;margin-top:22px;font-size:13px;color:#475569;line-height:1.6;cursor:pointer;">
-            <input type="checkbox" required aria-label="Consent to share profile" style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#2563eb;" />
+            <input type="checkbox" name="consent" required aria-label="Consent to share profile" style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#2563eb;" />
             <span>I consent to Curated sharing my profile with a potential client for the purpose of a possible introduction.</span>
           </label>
 
@@ -1866,30 +1868,90 @@
     setTimeout(() => switchTab('talent'), 600);
   }
 
-  // ── Form submit
-  function handleSubmit(e, type) {
-    e.preventDefault();
-    const form = e.target;
-    const fields = form.querySelectorAll('[required]');
-    let ok = true;
-    fields.forEach(f => {
-      f.style.borderColor = '';
-      f.style.outline = '';
-      const empty = f.type === 'checkbox' ? !f.checked : !f.value.trim();
-      if (empty) { f.style.borderColor = '#ef4444'; f.style.outline = '2px solid #ef4444'; ok = false; }
-    });
-    if (!ok) {
-      form.querySelector('[required]').focus();
-      return;
-    }
-    const titles = { business: 'Project enquiry received!', talent: 'Application received!' };
-    const msgs   = { business: "We'll review your details and be in touch soon.", talent: "We'll reach out when there's a relevant project match." };
-    document.getElementById('toast-title').textContent = titles[type];
-    document.getElementById('toast-msg').textContent   = msgs[type];
+  // ── Form submit (sends to email via FormSubmit.co)
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/curatedtalentmarketplace@gmail.com';
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function setFieldError(f, bad) {
+    if (bad) { f.style.borderColor = '#ef4444'; f.style.outline = '2px solid #ef4444'; }
+    else      { f.style.borderColor = ''; f.style.outline = ''; }
+  }
+
+  function showToast(title, msg) {
+    document.getElementById('toast-title').textContent = title;
+    document.getElementById('toast-msg').textContent   = msg;
     const t = document.getElementById('toast');
     t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 5000);
-    form.reset();
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => t.classList.remove('show'), 5000);
+  }
+
+  async function handleSubmit(e, type) {
+    e.preventDefault();
+    const form = e.target;
+    let firstBad = null;
+
+    form.querySelectorAll('[required]').forEach(f => {
+      const empty = f.type === 'checkbox' ? !f.checked : !f.value.trim();
+      setFieldError(f, empty);
+      if (empty && !firstBad) firstBad = f;
+    });
+
+    const emailField = form.querySelector('input[type="email"]');
+    if (emailField && emailField.value.trim() && !EMAIL_RE.test(emailField.value.trim())) {
+      setFieldError(emailField, true);
+      if (!firstBad) firstBad = emailField;
+    }
+
+    if (firstBad) { firstBad.focus(); return; }
+
+    const honey = form.querySelector('[name="_honey"]');
+    if (honey && honey.value) { form.reset(); return; }
+
+    if (location.protocol === 'file:') {
+      showToast("Forms need a hosted page",
+        'Open the site from its web address (e.g. GitHub Pages) rather than a local file, or email curatedtalentmarketplace@gmail.com.');
+      return;
+    }
+
+    const btn = form.querySelector('button[type="submit"]');
+    const btnHTML = btn ? btn.innerHTML : '';
+    if (btn) { btn.disabled = true; btn.style.opacity = '0.7'; btn.innerHTML = 'Sending…'; }
+
+    try {
+      const data = new FormData(form);
+      data.append('_subject', type === 'business'
+        ? 'New project enquiry — Curated Talent Marketplace'
+        : 'New specialist application — Curated Talent Marketplace');
+      data.append('_template', 'table');
+      data.append('_captcha', 'false');
+      data.append('form_type', type === 'business' ? 'Project enquiry' : 'Talent application');
+
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !json || String(json.success) === 'false') {
+        throw new Error((json && json.message) || 'The form service rejected this submission.');
+      }
+
+      const titles = { business: 'Project enquiry received!', talent: 'Application received!' };
+      const msgs   = { business: "We'll review your details and be in touch soon.", talent: "We'll reach out when there's a relevant project match." };
+      showToast(titles[type], msgs[type]);
+      form.reset();
+      if (type === 'business') updateBudgetRanges();
+    } catch (err) {
+      const reason = (err && err.message) || '';
+      const activation = /activat/i.test(reason);
+      showToast(activation ? 'Form not activated yet' : "We couldn't send that",
+        activation
+          ? 'The site owner must click the “Activate Form” email sent to curatedtalentmarketplace@gmail.com. Please email that address in the meantime.'
+          : (reason || 'Please try again in a moment, or email us directly at curatedtalentmarketplace@gmail.com.'));
+    } finally {
+      if (btn) { btn.disabled = false; btn.style.opacity = ''; btn.innerHTML = btnHTML; }
+    }
   }
 
   // ── Privacy modal
