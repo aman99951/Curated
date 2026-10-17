@@ -1433,7 +1433,7 @@
 
         <form onsubmit="handleSubmit(event,'business')" novalidate>
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
-          <input type="hidden" name="Form Type" value="Project enquiry" />
+          <input type="hidden" name="Form" value="Project enquiry" />
           <input type="hidden" name="_subject" value="New project enquiry — Curated Talent Marketplace" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
@@ -1441,12 +1441,12 @@
 
             <div>
               <label class="form-label">Your name <span style="color:#ef4444;">*</span></label>
-              <input type="text" name="Your Name" class="form-input" placeholder="Jane Smith" required />
+              <input type="text" name="Name" class="form-input" placeholder="Jane Smith" required />
             </div>
 
             <div>
               <label class="form-label">Business / Company <span style="color:#ef4444;">*</span></label>
-              <input type="text" name="Business / Company" class="form-input" placeholder="Your company name" required />
+              <input type="text" name="Company" class="form-input" placeholder="Your company name" required />
             </div>
 
             <div>
@@ -1456,12 +1456,12 @@
 
             <div>
               <label class="form-label">Phone / WhatsApp</label>
-              <input type="tel" name="Phone / WhatsApp" class="form-input" placeholder="+44 7XXX XXXXXX" />
+              <input type="tel" name="Phone" class="form-input" placeholder="+44 7XXX XXXXXX" />
             </div>
 
             <div style="grid-column:1/-1;">
               <label class="form-label">Service required <span style="color:#ef4444;">*</span></label>
-              <select class="form-input" name="Service Required" required>
+              <select class="form-input" name="Service" required>
                 <option value="" disabled selected>Select a service...</option>
                 <option>Google Ads / PPC</option>
                 <option>SEO</option>
@@ -1475,18 +1475,18 @@
 
             <div style="grid-column:1/-1;">
               <label class="form-label">Project description <span style="color:#ef4444;">*</span></label>
-              <textarea name="Project Description" class="form-input" rows="4" placeholder="Briefly describe your project, goals, and what you're hoping to achieve..." required style="resize:vertical;"></textarea>
+              <textarea name="Project" class="form-input" rows="4" placeholder="Briefly describe your project, goals, and what you're hoping to achieve..." required style="resize:vertical;"></textarea>
             </div>
 
             <div>
               <label class="form-label">Expected start date</label>
-              <input type="date" name="Expected Start Date" class="form-input" />
+              <input type="date" name="Start Date" class="form-input" />
             </div>
 
             <div>
               <label class="form-label">Approximate budget <span style="font-size:11px;color:#94a3b8;font-weight:400;">(optional)</span></label>
               <div style="display:flex;gap:8px;">
-                <select class="form-input" id="budget-currency" name="Budget Currency" onchange="updateBudgetRanges()" aria-label="Budget currency" style="flex:0 0 106px;">
+                <select class="form-input" id="budget-currency" name="Currency" onchange="updateBudgetRanges()" aria-label="Budget currency" style="flex:0 0 106px;">
                   <option value="GBP" selected>GBP £</option>
                   <option value="USD">USD $</option>
                   <option value="EUR">EUR €</option>
@@ -1495,7 +1495,7 @@
                   <option value="NZD">NZD $</option>
                   <option value="INR">INR ₹</option>
                 </select>
-                <select class="form-input" id="budget-select" name="Budget Range" style="flex:1;min-width:0;">
+                <select class="form-input" id="budget-select" name="Budget" style="flex:1;min-width:0;">
                   <option value="" disabled selected>Select range...</option>
                   <option>Under £1,000</option>
                   <option>£1,000 – £3,000</option>
@@ -1529,7 +1529,7 @@
 
         <form onsubmit="handleSubmit(event,'talent')" novalidate>
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
-          <input type="hidden" name="Form Type" value="Talent application" />
+          <input type="hidden" name="Form" value="Talent application" />
           <input type="hidden" name="_subject" value="New specialist application — Curated Talent Marketplace" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
@@ -1537,7 +1537,7 @@
 
             <div>
               <label class="form-label">Your name <span style="color:#ef4444;">*</span></label>
-              <input type="text" name="Your Name" class="form-input" placeholder="John Doe" required />
+              <input type="text" name="Name" class="form-input" placeholder="John Doe" required />
             </div>
 
             <div>
@@ -1547,12 +1547,12 @@
 
             <div>
               <label class="form-label">Phone / WhatsApp</label>
-              <input type="tel" name="Phone / WhatsApp" class="form-input" placeholder="+44 7XXX XXXXXX" />
+              <input type="tel" name="Phone" class="form-input" placeholder="+44 7XXX XXXXXX" />
             </div>
 
             <div>
               <label class="form-label">Primary skill <span style="color:#ef4444;">*</span></label>
-              <select class="form-input" name="Primary Skill" required>
+              <select class="form-input" name="Skill" required>
                 <option value="" disabled selected>Select your skill...</option>
                 <option>Google Ads / PPC</option>
                 <option>SEO</option>
@@ -1566,7 +1566,7 @@
 
             <div>
               <label class="form-label">Years of experience <span style="color:#ef4444;">*</span></label>
-              <select class="form-input" name="Years of Experience" required>
+              <select class="form-input" name="Experience" required>
                 <option value="" disabled selected>Select range...</option>
                 <option>1–2 years</option>
                 <option>3–5 years</option>
@@ -1577,7 +1577,7 @@
 
             <div>
               <label class="form-label">Current availability</label>
-              <select class="form-input" name="Current Availability">
+              <select class="form-input" name="Availability">
                 <option value="" disabled selected>Availability...</option>
                 <option>Available now</option>
                 <option>Available in 2–4 weeks</option>
@@ -1588,18 +1588,18 @@
 
             <div>
               <label class="form-label">Portfolio link</label>
-              <input type="url" name="Portfolio Link" class="form-input" placeholder="https://yourportfolio.com" />
+              <input type="url" name="Portfolio" class="form-input" placeholder="https://yourportfolio.com" />
             </div>
 
             <div>
               <label class="form-label">LinkedIn profile</label>
-              <input type="url" name="LinkedIn Profile" class="form-input" placeholder="https://linkedin.com/in/yourprofile" />
+              <input type="url" name="LinkedIn" class="form-input" placeholder="https://linkedin.com/in/yourprofile" />
             </div>
 
           </div>
 
           <label style="display:flex;align-items:flex-start;gap:10px;margin-top:22px;font-size:13px;color:#475569;line-height:1.6;cursor:pointer;">
-            <input type="checkbox" name="Consent to Share Profile" value="Agreed" required aria-label="Consent to share profile" style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#2563eb;" />
+            <input type="checkbox" name="Consent" value="Agreed" required aria-label="Consent to share profile" style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#2563eb;" />
             <span>I consent to Curated sharing my profile with a potential client for the purpose of a possible introduction.</span>
           </label>
 
